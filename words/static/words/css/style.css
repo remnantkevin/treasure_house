@@ -9,3 +9,11 @@ p.definition {
 div.well {
   margin: 20px;
 }
+
+div.letter-header h2 {
+  margin-bottom: 5px;
+}
+
+div.letter-header hr {
+  margin-top: 0px;
+}

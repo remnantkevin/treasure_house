@@ -5,17 +5,26 @@
   <link rel="stylesheet" type="text/css" href="{% static 'words/css/style.css' %}" />
 </head>
 
+{% for list in list_of_words %}
+  <div class="letter-header">
+    <h2><b>{{ list.0.word.0|upper }}</b></h2>
+    <hr>
+  </div>
+  {% for word in list %}
+	  <p><a href="{{ word.id }}">{{ word.word|title }}</a></p> <!-- relative to where you are -->
+  {% endfor %}
+{% endfor %}
 
-<div class="well">
-  <p class="word"><a href="#" data-toggle="tooltip" data-placement="bottom" title="this is the word we're defining">{{ word.word }}</a></p>
-  <p class="definition">{{ word.definition }}</p>
-</div>
-
-<p><a href="/words">back to index</a></p>
-
+<!--
+<ul>
+<li>
+	<ul>
+		<li>Abacus</li>
+		<li>Able</li>
+	</ul>
+</li>
+</ul>
+-->
 
 <script src="{% static 'words/js/jquery-2.1.1.min.js' %}"></script>
 <script src="{% static 'words/js/bootstrap.min.js' %}"></script>
-<script>
-  $('p.word a').tooltip();
-</script>
