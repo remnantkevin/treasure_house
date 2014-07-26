@@ -1,9 +1,6 @@
-{% load staticfiles %}
+{% extends "words/base.html" %}
 
-<head>
-  <link rel="stylesheet" type="text/css" href="{% static 'words/css/bootstrap.min.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'words/css/style.css' %}" />
-</head>
+{% block body %}
 
 {% for list in list_of_words %}
   <div class="letter-header">
@@ -15,16 +12,4 @@
   {% endfor %}
 {% endfor %}
 
-<!--
-<ul>
-<li>
-	<ul>
-		<li>Abacus</li>
-		<li>Able</li>
-	</ul>
-</li>
-</ul>
--->
-
-<script src="{% static 'words/js/jquery-2.1.1.min.js' %}"></script>
-<script src="{% static 'words/js/bootstrap.min.js' %}"></script>
+{% endblock %}

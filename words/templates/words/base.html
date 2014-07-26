@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'words/css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'words/css/style.css' %}" />
+  {% block head %}
+  {% endblock %}
+</head>
+
+<body class="well">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+  <div class="nav-header">
+    <a class="navbar-text" href="/words">WORDS</a>
+  </div>
+  <div class="container">
+    <p class="navbar-text">Welcome</p>
+    <a href="/words" class="btn btn-info navbar-btn btn-sm">Do something</a>
+  </div>
+</nav>
+<div class="panel whole-page">
+{% block body %}
+
+{% endblock %}
+</div>
+</body>
+
+<footer>
+<script src="{% static 'words/js/jquery-2.1.1.min.js' %}"></script>
+<script src="{% static 'words/js/bootstrap.min.js' %}"></script>
+{% block scripts %}
+{% endblock %}
+</footer>

@@ -1,10 +1,6 @@
-{% load staticfiles %}
+{% extends "words/base.html" %}
 
-<head>
-  <link rel="stylesheet" type="text/css" href="{% static 'words/css/bootstrap.min.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'words/css/style.css' %}" />
-</head>
-
+{% block body %}
 
 <div class="well">
   <p class="word"><a href="#" data-toggle="tooltip" data-placement="bottom" title="this is the word we're defining">{{ word.word }}</a></p>
@@ -13,9 +9,10 @@
 
 <p><a href="/words">back to index</a></p>
 
+{% endblock %}
 
-<script src="{% static 'words/js/jquery-2.1.1.min.js' %}"></script>
-<script src="{% static 'words/js/bootstrap.min.js' %}"></script>
+{% block scripts %}
 <script>
   $('p.word a').tooltip();
 </script>
+{% endblock %}

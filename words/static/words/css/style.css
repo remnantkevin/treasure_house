@@ -17,3 +17,8 @@ div.letter-header h2 {
 div.letter-header hr {
   margin-top: 0px;
 }
+
+div.whole-page {
+  margin-top: 50px;
+  padding: 20px;
+}
