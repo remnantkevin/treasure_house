@@ -1,6 +1,19 @@
 {% load staticfiles %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'words/style.css' %}" />
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'words/css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'words/css/style.css' %}" />
+</head>
 
-<p class="word">{{ word.word }}</p>
-<p class="definition">{{ word.definition }}</p>
+
+<div class="well">
+  <p class="word"><a href="#" data-toggle="tooltip" data-placement="bottom" title="this is the word we're defining">{{ word.word }}</a></p>
+  <p class="definition">{{ word.definition }}</p>
+</div>
+
+
+<script src="{% static 'words/js/jquery-2.1.1.min.js' %}"></script>
+<script src="{% static 'words/js/bootstrap.min.js' %}"></script>
+<script>
+  $('p.word a').tooltip();
+</script>

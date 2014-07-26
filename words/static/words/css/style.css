@@ -5,3 +5,7 @@ p.word {
 p.definition {
   margin-left: 30px;
 }
+
+div.well {
+  margin: 20px;
+}
